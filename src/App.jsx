@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import './App.css'
 import Navbar from './components/layout/Navbar'
@@ -14,7 +14,7 @@ import Contact from './pages/Contact'
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <Navbar />
       <AnimatePresence mode="wait">
@@ -28,7 +28,7 @@ function App() {
         </Routes>
       </AnimatePresence>
       <Footer />
-    </BrowserRouter>
+    </>
   )
 }
 
