@@ -15,24 +15,29 @@ import Container from "../components/common/Container";
 const bottles = [
   [
     "01",
-    "Wine Bottles",
-    "Cleaned and prepared glass bottles for wineries, bottlers and beverage businesses.",
-    "/images/wine-bottles.jpg",
+    "Collection yard",
+    "Recovered material arrives at the facility before sorting and preparation.",
+    "/images/factory-yard.jpg",
   ],
   [
     "02",
-    "Whisky Bottles",
-    "Prepared bottles for reuse by distilleries, craft spirits and premium product lines.",
-    "/images/whisky-bottles.jpg",
+    "Washing line",
+    "The cleaning line prepares collected material through a careful wash process.",
+    "/images/wash-line.jpg",
   ],
   [
     "03",
-    "Other Glass Bottles",
-    "Reusable glass formats handled with the same attention to cleaning, inspection and packing.",
-    "/images/glass-bottles.jpg",
+    "Crate storage",
+    "Sorted material is organized in reusable crates for the next stage of handling.",
+    "/images/crate-storage.jpg",
   ],
 ];
 const steps = ["Collection", "Cleaning", "Inspection", "Packing", "Supply"];
+const facilityScenes = [
+  ["01", "Sort with intention", "/images/sorting-yard.jpg"],
+  ["02", "Wash with care", "/images/wash-tanks.jpg"],
+  ["03", "Store for the next move", "/images/crate-storage.jpg"],
+];
 const capabilities = [
   [
     "Reliable sourcing",
@@ -54,15 +59,20 @@ const capabilities = [
 export default function Home() {
   return (
     <main>
-      <section className="grain relative min-h-190 overflow-hidden border-b hairline pt-32">
+      <section className="grain relative isolate min-h-190 overflow-hidden border-b hairline pt-32">
+        <img
+          src="/images/factory-yard.jpg"
+          alt="JAY MAA KALI facility collection yard"
+          className="absolute inset-0 z-0 h-full w-full object-cover opacity-35"
+        />
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 z-[1]"
           style={{
             background:
               "linear-gradient(90deg, rgba(6,16,11,.98) 0%, rgba(6,16,11,.83) 43%, rgba(6,16,11,.2) 100%)",
           }}
         />
-        <Container className="relative flex min-h-157.5 flex-col justify-between pb-16">
+        <Container className="relative z-10 flex min-h-157.5 flex-col justify-between pb-16">
           <div className="max-w-4xl">
             <motion.p
               initial={{ opacity: 0, y: 18 }}
@@ -108,6 +118,30 @@ export default function Home() {
               Chhattisgarh / Distillery supply
             </p>
             <ArrowDownRight className="text-[#86efac]" />
+          </div>
+        </Container>
+      </section>
+      <section className="section-pad border-b hairline bg-[#0d1812]">
+        <Container className="grid items-center gap-12 md:grid-cols-[1.05fr_.95fr]">
+          <div className="relative aspect-[1.15] overflow-hidden border hairline">
+            <img
+              src="/images/wash-line.jpg"
+              alt="Brush washing line inside the facility"
+              className="h-full w-full object-cover grayscale transition duration-700 hover:scale-105 hover:grayscale-0"
+            />
+            <div className="absolute bottom-4 left-4 border border-white/20 bg-[#07150d]/80 px-3 py-2 backdrop-blur-sm">
+              <p className="eyebrow text-[10px] text-[#86efac]">Inside the facility</p>
+            </div>
+          </div>
+          <div>
+            <p className="eyebrow mb-5 text-[10px] text-[#86efac]">01 / The work behind the supply</p>
+            <h2 className="display max-w-xl text-4xl font-semibold md:text-6xl">Real work. Visible progress.</h2>
+            <p className="mt-7 max-w-lg text-base leading-8 text-slate-300">From the first collection yard to the washing line, every stage gives recovered material a clearer path forward. The facility is built around practical handling, careful movement and repeatable quality.</p>
+            <div className="mt-10 grid max-w-lg grid-cols-3 border-t hairline pt-5">
+              <div><p className="display text-3xl font-semibold text-[#86efac]">05</p><p className="mt-2 text-xs text-slate-500">workflow stages</p></div>
+              <div><p className="display text-3xl font-semibold text-[#86efac]">1:1</p><p className="mt-2 text-xs text-slate-500">clear contact</p></div>
+              <div><p className="display text-3xl font-semibold text-[#86efac]">B2B</p><p className="mt-2 text-xs text-slate-500">supply focus</p></div>
+            </div>
           </div>
         </Container>
       </section>
@@ -230,6 +264,20 @@ export default function Home() {
                 <h3 className="display mt-10 text-xl">{step}</h3>
               </motion.div>
             ))}
+          </div>
+        </Container>
+      </section>
+      <section className="section-pad">
+        <Container>
+          <div className="mb-14 flex items-end justify-between">
+            <div><p className="eyebrow mb-5 text-[10px] text-[#86efac]">04 / How the facility moves</p><h2 className="display text-4xl font-semibold md:text-6xl">Every stage has a place.</h2></div>
+            <Link to="/process" className="hidden text-sm text-slate-400 hover:text-white md:block">See the full process <MoveUpRight className="ml-1 inline" size={15} /></Link>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {facilityScenes.map(([number, title, image], index) => <motion.article key={title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * .1 }} className="group relative overflow-hidden border hairline">
+              <div className="aspect-[1.1] overflow-hidden"><img src={image} alt={title} className="h-full w-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0" /></div>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#06100b] via-[#06100b]/80 to-transparent px-5 pb-5 pt-16"><p className="eyebrow text-[10px] text-[#86efac]">{number}</p><h3 className="display mt-2 text-2xl font-semibold">{title}</h3></div>
+            </motion.article>)}
           </div>
         </Container>
       </section>
