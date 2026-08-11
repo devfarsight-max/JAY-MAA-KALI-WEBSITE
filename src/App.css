@@ -3,7 +3,14 @@
 .grain { position: relative; overflow: hidden; }
 .grain::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E"); }
 .hairline { border-color: var(--color-line); }
-.surface { background: #0d1812; border: 1px solid var(--color-line); }
+.surface { background: #0d2115; border: 1px solid var(--color-line); }
+.text-\[\#86efac\], [class~="text-[#86efac]"] { color: #4f9f68 !important; }
+[class~="bg-[#86efac]"] { background-color: #4f9f68 !important; }
+[class~="border-[#86efac]"] { border-color: #4f9f68 !important; }
+[class~="text-[#06100b]"] { color: #07150d !important; }
+[class~="bg-[#06100b]"] { background-color: #07150d !important; }
+[class~="border-[#06100b]"] { border-color: #07150d !important; }
+[class~="bg-[#0d1812]"] { background-color: #0d2115 !important; }
 .display-xl { font-size: clamp(3.5rem, 9vw, 9.5rem); line-height: .86; letter-spacing: -.065em; }
 .display-lg { font-size: clamp(2.8rem, 6vw, 6.5rem); line-height: .9; letter-spacing: -.055em; }
 .section-pad { padding-block: clamp(5rem, 10vw, 10rem); }
