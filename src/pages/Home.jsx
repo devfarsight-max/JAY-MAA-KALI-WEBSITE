@@ -145,7 +145,7 @@ export default function Home() {
           </div>
         </Container>
       </section>
-      <section className="border-b hairline bg-[#86efac] py-7 text-[#06100b]">
+      <section className="border-b hairline bg-[#86efac] py-7 text-white">
         <Container className="grid gap-6 text-sm font-semibold md:grid-cols-3">
           {capabilities.map(([title, description, Icon], index) => (
             <div
@@ -346,7 +346,7 @@ export default function Home() {
           </ul>
         </Container>
       </section>
-      <section className="bg-[#86efac] py-20 text-[#06100b]">
+      <section className="bg-[#86efac] py-20 text-white">
         <Container className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>
             <p className="eyebrow mb-5 text-[10px] opacity-60">
