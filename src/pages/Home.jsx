@@ -17,13 +17,13 @@ const bottles = [
     "01",
     "Collection yard",
     "Recovered material arrives at the facility before sorting and preparation.",
-    "/images/factory-yard.jpg",
+    "/images/sorting-yard.jpg",
   ],
   [
     "02",
     "Sorting area",
     "Collected material is separated and organized for the cleaning workflow.",
-    "/images/sorting-yard.jpg",
+    "/images/crate-storage.jpg",
   ],
   [
     "03",

@@ -126,6 +126,46 @@ export default function Process() {
           </div>
         </Container>
       </section>
+      <section className="section-pad bg-[#f1f4ed] text-[#06100b]">
+        <Container className="grid gap-12 md:grid-cols-[.9fr_1.1fr]">
+          <div>
+            <p className="eyebrow mb-5 text-[10px] text-[#159447]">
+              02 / Why it matters
+            </p>
+            <h2 className="display text-4xl font-semibold md:text-6xl">
+              A clearer process feels better at every handoff.
+            </h2>
+            <p className="mt-7 max-w-lg text-base leading-8 text-slate-600">
+              A neutral, visible workflow makes it easier to plan storage,
+              schedule transport and make confident purchasing decisions.
+            </p>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <article className="rounded-3xl border border-[#06100b]/10 bg-white p-6 shadow-[0_24px_80px_-50px_rgba(15,23,42,0.7)] text-[#06100b]">
+              <h3 className="display text-2xl font-semibold">Fewer surprises</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-700">
+                Clear checks and consistent handling make every stage more
+                predictable, reducing risk for buyers and carriers alike.
+              </p>
+              <ul className="mt-5 space-y-3 text-sm text-slate-600">
+                <li>Simple batch notes that explain condition and format.</li>
+                <li>Visible sorting and wash steps so buyers understand what they receive.</li>
+              </ul>
+            </article>
+            <article className="rounded-3xl border border-[#06100b]/10 bg-white p-6 shadow-[0_24px_80px_-50px_rgba(15,23,42,0.7)] text-[#06100b]">
+              <h3 className="display text-2xl font-semibold">Steady supply</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-700">
+                Organized packing, reliable inspection and clear timing help the
+                next buyer plan inventory with confidence.
+              </p>
+              <ul className="mt-5 space-y-3 text-sm text-slate-600">
+                <li>Material is grouped by condition and prepared for easy transport.</li>
+                <li>Consistent handoffs mean fewer delays and more dependable arrivals.</li>
+              </ul>
+            </article>
+          </div>
+        </Container>
+      </section>
       <section className="section-pad border-y hairline bg-[#0d1812]">
         <Container className="grid items-center gap-10 md:grid-cols-[minmax(0,1fr)_minmax(280px,.9fr)] md:gap-12">
           <div>
@@ -196,7 +236,7 @@ export default function Process() {
           <Button
             to="/contact"
             variant="outline"
-            className="w-fit border-[#06100b] text-[#06100b] hover:bg-[#06100b] hover:text-[#86efac]"
+            className="w-fit border-[#06100b] text-[#06100b] hover:bg-[#c2d4cb] hover:text-[#9deebb]"
           >
             Start a conversation
           </Button>
