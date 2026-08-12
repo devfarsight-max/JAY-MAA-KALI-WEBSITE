@@ -21,15 +21,15 @@ const bottles = [
   ],
   [
     "02",
-    "Washing line",
-    "The cleaning line prepares collected material through a careful wash process.",
-    "/images/wash-line.jpg",
+    "Sorting area",
+    "Collected material is separated and organized for the cleaning workflow.",
+    "/images/sorting-yard.jpg",
   ],
   [
     "03",
-    "Crate storage",
-    "Sorted material is organized in reusable crates for the next stage of handling.",
-    "/images/crate-storage.jpg",
+    "Washing system",
+    "The wash line prepares material through a visible, sequential process.",
+    "/images/wash-line.jpg",
   ],
 ];
 const steps = ["Collection", "Cleaning", "Inspection", "Packing", "Supply"];
@@ -101,6 +101,16 @@ export default function Home() {
               pack them with care, and supply them to distilleries, bottlers and
               beverage businesses.
             </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25 }}
+              className="mt-5 max-w-md text-base leading-7 text-slate-300"
+            >
+              Every shipment is prepared to help buyers plan inventory, reduce
+              handling risk, and keep material moving smoothly from collection to
+              reuse.
+            </motion.p>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -113,7 +123,7 @@ export default function Home() {
               </Button>
             </motion.div>
           </div>
-          <div className="flex items-end justify-between border-t hairline pt-5">
+          <div className="mt-10 flex items-end justify-between border-t hairline pt-5">
             <p className="eyebrow text-[10px] text-slate-500">
               Chhattisgarh / Distillery supply
             </p>
@@ -147,6 +157,10 @@ export default function Home() {
       </section>
       <section className="border-b hairline bg-[#86efac] py-7 text-white">
         <Container className="grid gap-6 text-sm font-semibold md:grid-cols-3">
+          <p className="max-w-2xl text-sm leading-7 text-slate-100 md:col-span-3">
+            Practical supply starts with dependable collection, detailed checks,
+            and packaging that makes pickup efficient for every business.
+          </p>
           {capabilities.map(([title, description, Icon], index) => (
             <div
               key={title}
@@ -175,6 +189,11 @@ export default function Home() {
               the businesses ready to use it again. We make the next step easier
               with organized supply, visible quality checks and straightforward
               communication.
+            </p>
+            <p className="mt-5 max-w-xl text-base leading-7 text-slate-600">
+              We work with buyers to understand bottle formats, timing and
+              handling needs so each load arrives ready for the next commercial
+              stage.
             </p>
             <Link
               to="/about"
@@ -248,6 +267,11 @@ export default function Home() {
             <br />
             <span className="text-[#86efac]">Pack. Supply.</span>
           </h2>
+          <p className="mt-6 max-w-3xl text-base leading-8 text-slate-400">
+            Each stage is structured so material reaches the next step with
+            fewer surprises. From yard arrival to final supply, the workflow is
+            built around consistency and clarity.
+          </p>
           <div className="mt-16 grid border-l hairline md:grid-cols-5 md:border-l-0">
             {steps.map((step, index) => (
               <motion.div
@@ -290,6 +314,11 @@ export default function Home() {
             <h2 className="display text-4xl font-semibold md:text-6xl">
               A simpler way to source reusable glass.
             </h2>
+            <p className="mt-6 max-w-xl text-base leading-8 text-slate-600">
+              Whether you are buying for production, storage or quality testing,
+              our service is designed to keep reusable glass moving with fewer
+              delays.
+            </p>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             <article className="surface p-6">
@@ -359,7 +388,7 @@ export default function Home() {
           <Button
             to="/contact"
             variant="outline"
-            className="w-fit border-[#06100b] text-[#06100b] hover:bg-[#06100b] hover:text-[#86efac]"
+            className="w-fit border-[#06100b] text-[#06100b] hover:bg-[#eaf5f0] hover:text-[#86efac]"
           >
             Discuss your requirement
           </Button>
