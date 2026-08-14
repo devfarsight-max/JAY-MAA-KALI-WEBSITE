@@ -6,8 +6,12 @@ export default function Footer() {
     <footer className="border-t hairline bg-[#0d1812] py-14">
       <div className="content-width grid gap-12 md:grid-cols-[1.5fr_1fr_1fr] md:gap-8">
         <div>
-          <Link to="/" className="display text-xl font-bold">
-            JAY MAA KALI<span className="text-[#86efac]">.</span>
+          <Link to="/" aria-label="Jay Maa Kali home" className="inline-flex">
+            <img
+              src="/logo.png"
+              alt="Jay Maa Kali"
+              className="h-24 w-auto rounded-sm object-contain"
+            />
           </Link>
           <p className="mt-5 max-w-xs text-sm leading-7 text-slate-400">
             Collecting, cleaning, preparing and supplying reusable glass bottles
@@ -31,11 +35,11 @@ export default function Footer() {
         <div>
           <p className="eyebrow mb-5 text-[10px] text-[#86efac]">Connect</p>
           <p className="text-sm leading-7 text-slate-400">
-            [Phone Number]
+            7898095588
             <br />
-            [Email Address]
+            gabhi5588@gmail.com
             <br />
-            [Business Address]
+            Khasra No. 327/1, 327/5, Village Limtara, Post Limtara, Block Dhamdha, Opposite Dhan Society, Kumhari, District Durg, Chhattisgarh – 490042.
           </p>
           <a
             href="#top"

@@ -27,9 +27,14 @@ export default function Navbar() {
       <div className="content-width flex h-[76px] items-center justify-between">
         <Link
           to="/"
-          className="display flex items-center gap-2 text-lg font-bold tracking-tight"
+          className="flex items-center"
+          aria-label="Jay Maa Kali home"
         >
-          <span className="h-2.5 w-2.5 bg-[#86efac]" /> JAY MAA KALI
+          <img
+            src="/logo.png"
+            alt="Jay Maa Kali"
+            className="h-20 w-auto rounded-sm object-contain"
+          />
         </Link>
         <nav className="hidden items-center gap-2 md:flex">
           {links.map(([to, label]) => (
